@@ -12,6 +12,4 @@ patches:
     kind: Deployment
     name: welcome-php
     version: v1
-images:
-- name: quay.io/redhatworkshops/welcome-php
-  newTag: ffcd15
+  

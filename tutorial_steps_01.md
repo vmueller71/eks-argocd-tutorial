@@ -12,6 +12,8 @@ export TUTORIAL_HOME="$(pwd)/gitops"
 cd $TUTORIAL_HOME
 ```
 
+## ArgoCD
+
 Install ArgoCD and check that every pod is running properly in the argocd namespace:
 ```
 kubectl create namespace argocd
