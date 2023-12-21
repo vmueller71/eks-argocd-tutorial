@@ -10,7 +10,7 @@ patches:
       group: apps
       kind: Deployment
       name: bgd
-      namespace: bgdk
+      namespace: bgd
     patch: |-
       - op: replace
         path: /spec/template/spec/containers/0/env/0/value
