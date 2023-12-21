@@ -39,3 +39,8 @@ Login to ArgoCD
 ```
 argocd login --insecure --grpc-web $argoURL  --username admin --password $argoPass
 ```
+
+Deploy the application
+```
+kubectl apply -f examples/bgd-app/bgd-app.yaml
+```
