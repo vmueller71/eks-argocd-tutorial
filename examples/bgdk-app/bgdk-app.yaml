@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: bgdk-app
-  namespace: openshift-gitops
+  namespace: argocd
 spec:
   destination:
     namespace: bgdk
