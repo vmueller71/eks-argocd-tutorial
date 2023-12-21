@@ -44,3 +44,25 @@ Deploy the application
 ```
 kubectl apply -f examples/bgd-app/bgd-app.yaml
 ```
+
+Get the external DNS with the below command
+```
+kubectl get all -n bgd
+```
+
+Copy the value under EXTERNAL-IP, paste it into a browser window and add the port ':8080'
+
+### Addressing Configuration Drift
+
+Let’s introduce a change in the application environment! Patch the live Deployment manifest to change the color of the square in the application from blue to green:
+
+```
+kubectl -n bgd patch deploy/bgd --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/env/0/value", "value":"green"}]'
+```
+
+Wait for the rollout to happen:
+```
+kubectl rollout status deploy/bgd -n bgd
+```
+
+Refresh the tab where your application is running. You should see now a green square.
